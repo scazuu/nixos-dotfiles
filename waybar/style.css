@@ -1,0 +1,84 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    border-radius: 5px;
+}
+window#waybar {
+    background-color: transparent;
+    border-bottom: 0px;
+    color: #ebdbb2;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+.modules-right {
+    margin: 10px 10px 0 0;
+}
+.modules-center {
+    margin: 10px 0 0 0;
+}
+.modules-left {
+    margin: 10px 0 0 10px;
+}
+button {
+    border: none;
+}
+#custom-ws1, #custom-ws2, #custom-ws3, #custom-ws4, #custom-ws5,
+#custom-ws6, #custom-ws7, #custom-ws8, #custom-ws9, #custom-ws10 {
+    padding: 0 6px;
+    margin: 0 2px;
+    background-color: #282828;
+    color: #ebdbb2;
+}
+#custom-ws1.active, #custom-ws2.active, #custom-ws3.active, #custom-ws4.active, #custom-ws5.active,
+#custom-ws6.active, #custom-ws7.active, #custom-ws8.active, #custom-ws9.active, #custom-ws10.active {
+    background-color: #665c54;
+    color: #d79921;
+}
+
+#custom-ws1:hover, #custom-ws2:hover, #custom-ws3:hover, #custom-ws4:hover, #custom-ws5:hover,
+#custom-ws6:hover, #custom-ws7:hover, #custom-ws8:hover, #custom-ws9:hover, #custom-ws10:hover {
+    background-color: #45475a;
+}
+#cava,
+#window,
+#clock,
+#wireplumber,
+#mpris,
+#cpu,
+#memory,
+#custom-gpu,
+#network {
+    padding: 0 10px;
+    background-color: #282828;
+    color: #ebdbb2;
+}
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+#cava {
+    padding: 0 5px;
+}
+#wireplumber.muted {
+    background-color: #458588;
+}
+#mpris.playing {
+    background-color: #d79921;
+    color: #282828;
+}
+
+#group-audio {
+    background-color: #282828;
+}
+
+.audio-drawer {
+    background-color: #282828;
+    transition: min-width 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+#custom-volume-slider {
+    padding: 0 10px;
+    color: #ebdbb2;
+}
