@@ -91,6 +91,8 @@
 	spotify
 	git
 	vscode-fhs
+  xorg-server
+  xprop
 	jetbrains.idea
 	jdk21
 	godot
