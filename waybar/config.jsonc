@@ -3,9 +3,8 @@
     "output": ["HDMI-A-1", "DP-3"],
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 30,
     "spacing": 4,
-    "modules-left": ["hyprland/workspaces", "cava"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["mpris", "cpu", "memory", "custom/gpu", "network", "group/audio", "clock"],
 
@@ -30,7 +29,7 @@
       "max-length": 40
     },
     "cava": {
-      "framerate": 30,
+      "framerate": 120,
       "autosens": 1,
       "bars": 14,
       "lower_cutoff_freq": 50,
@@ -40,41 +39,30 @@
       "stereo": true,
       "bar_delimiter": 0,
       "noise_reduction": 0.77,
-      "input_delay": 2,
+      "input_delay": 0,
       "hide_on_silence": true,
       "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"]
     },
-    "mpris": {
-      "format": " {status_icon} {dynamic}",
-      "interval": 1,
-      "dynamic-len": 40,
-      "status-icons": {
-        "playing": "▶",
-        "paused": "⏸",
-        "stopped": ""
-      },
-      "dynamic-order": ["title", "artist"],
-      "player": "playerctld"
-    },
     "cpu": {
       "format": "󰻠 {usage}%",
-      "interval": 2
+      "interval": 1
     },
     "memory": {
       "format": "󰍛 {percentage}%",
-      "interval": 2
+      "interval": 1
     },
     "custom/gpu": {
       "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-      "interval": 2,
+      "interval": 1,
       "format": "󰢮 {}%"
     },
     "network": {
       "interval": 2,
-      "format-wifi": "󰖩  󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes}",
-      "format-ethernet": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes}",
+      // "format-wifi": "󰖩  󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes}",
+      // "format-ethernet": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes}",
+      "format": "󰖩 Connected",
       "format-disconnected": "󰖪 Disconnected",
-      "tooltip-format": "{ifname} via {gwaddr}"
+      "tooltip": false
     },
     "group/audio": {
       "orientation": "inherit",
@@ -85,8 +73,7 @@
       },
       "modules": [
         "wireplumber",
-        "custom/volume-slider",
-        "custom/brightness-slider"
+        "custom/volume-slider"
       ]
     },
     "wireplumber": {
