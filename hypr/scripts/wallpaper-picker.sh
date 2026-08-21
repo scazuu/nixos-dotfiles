@@ -6,5 +6,6 @@ selected=$(for img in "$WALLPAPER_DIR"/*; do
 done | wofi --dmenu -p "Wallpaper" --allow-images)
 
 wallpaper="${selected##*text:}"
-
-[ -n "$wallpaper" ] && awww img "$wallpaper" --transition-type random --transition-duration 1 --transition-fps 140
+types=(left right top bottom wipe wave grow center outer)
+transition="${types[$RANDOM % ${#types[@]}]}"
+[ -n "$wallpaper" ] && awww img "$wallpaper" --transition-type "$transition" --transition-duration 1 --transition-fps 140
